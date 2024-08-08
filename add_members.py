@@ -25,8 +25,7 @@ def delete_workout_session(session_id):
         try:
             cursor = conn.cursor()
             query = "DELETE FROM WorkoutSessions WHERE session_id = %s"
-            values = session_id
-            cursor.execute(query, values)
+            cursor.execute(query, session_id)
             conn.commit()
             print("Session deleted")
         except:
