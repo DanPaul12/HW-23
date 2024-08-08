@@ -15,6 +15,8 @@ def connection():
             host = host
         )
         print("Successfully connected")
+        return conn
     except Error as e:
         print("Error: {e}")
+  
     

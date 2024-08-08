@@ -16,3 +16,18 @@ def add_member(id, name, age):
             print("Error: {e}")
         
 add_member("7", "Bobby Flake", "45")
+
+
+def delete_workout_session(session_id):
+    conn = connection()
+    if conn is not None:
+        try:
+            cursor = conn.cursor()
+            query = "DELETE FROM WorkoutSessions WHERE id = %s"
+            values = session_id
+            cursor.execute(query, values)
+            print("Session deleted")
+        except:
+            pass
+
+delete_workout_session(2)
