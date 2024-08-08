@@ -14,7 +14,7 @@ def connection():
             password = password,
             host = host
         )
+        print("Successfully connected")
     except Error as e:
         print("Error: {e}")
-    finally:
-        conn.close()
+    
