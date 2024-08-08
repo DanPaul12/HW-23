@@ -4,7 +4,7 @@ from mysql.connector import Error
 
 def add_member(id, name, age):
     conn = connection()
-    if conn:
+    if conn is not None:
         try:
             cursor = conn.cursor()
             query = "INSERT INTO Members Values (%s, %s, %s)"
@@ -15,4 +15,4 @@ def add_member(id, name, age):
         except Error as e:
             print("Error: {e}")
         
-add_member(7, "Bobby Flake", 45)
+add_member("7", "Bobby Flake", "45")
