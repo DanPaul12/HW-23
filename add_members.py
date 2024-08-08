@@ -15,7 +15,7 @@ def add_member(id, name, age):
         except Error as e:
             print("Error: {e}")
         
-add_member("7", "Bobby Flake", "45")
+
 
 
 def delete_workout_session(session_id):
@@ -23,11 +23,11 @@ def delete_workout_session(session_id):
     if conn is not None:
         try:
             cursor = conn.cursor()
-            query = "DELETE FROM WorkoutSessions WHERE id = %s"
+            query = "DELETE FROM WorkoutSessions WHERE session_id = %s"
             values = session_id
             cursor.execute(query, values)
             print("Session deleted")
         except:
             pass
 
-delete_workout_session(2)
+delete_workout_session("2")
