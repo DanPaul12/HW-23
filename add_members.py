@@ -28,7 +28,7 @@ def delete_workout_session(session_id):
             cursor.execute(query, session_id)
             conn.commit()
             print("Session deleted")
-        except:
-            pass
+        except Error:
+            print({Error})
 
 delete_workout_session(2, )
