@@ -1,3 +1,4 @@
+
 from sqlconnect import connection 
 from mysql.connector import Error
 
@@ -31,4 +32,4 @@ def delete_workout_session(session_id):
         except:
             pass
 
-delete_workout_session("2")
+delete_workout_session(2, )
